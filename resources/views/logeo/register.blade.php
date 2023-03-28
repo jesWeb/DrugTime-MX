@@ -39,7 +39,7 @@
 
                    <!-- btn registro -->
                 <div class="d-grid gap-2 col-6 mx-auto mt-3">
-                    <button class="btn btn-success m-3" type="submit"   value="save">Registrate</button>
+                    <button class="btn btn-success m-3" type="submit" value="save">Registrate</button>
                 </div>
 
                 </form>
