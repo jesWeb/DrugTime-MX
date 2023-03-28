@@ -19,6 +19,9 @@ return new class extends Migration
             $table->string('nombre');
             $table->string('cp');
             $table->timestamps();
+            //llave foranea
+            $table->unsignedBigInteger('municipios_id');
+            $table->foreign('municipios_id')->references('id')->on('municipios');
             $table->softDeletes();
         });
     }

@@ -14,16 +14,26 @@ return new class extends Migration
     public function up()
     {
         //
-        Schema::create('medicamentos',function (Blueprint $table){
+        Schema::create('maquinas', function (Blueprint $table)  {
             $table->id();
             $table->string('nombre');
-            $table->string('descripcion');
-            $table->string('tipo');
-            $table->Integer('imagenM');
+            $table->string('Modelo');
+            $table->string('Humedad');
             $table->timestamps();
             //llaves foraneas
+            $table->unsignedBigInteger('cuidadores_id');
+            $table->foreign('cuidadores_id')->references('id')->on('cuidadores');
+
             $table->unsignedBigInteger('tratamientos_id');
             $table->foreign('tratamientos_id')->references('id')->on('tratamientos');
+
+            $table->unsignedBigInteger('medicamentos_id');
+            $table->foreign('medicamentos_id')->references('id')->on('medicamentos');
+
+            $table->unsignedBigInteger('ubicaciones_id');
+            $table->foreign('ubicaciones_id')->references('id')->on('ubicaciones');
+
+           
             $table->softDeletes();
         });
     }
@@ -36,6 +46,6 @@ return new class extends Migration
     public function down()
     {
         //
-        Schema::dropIfExists('medicamentos');
+        Schema::dropIfExists('maquinas');
     }
 };
