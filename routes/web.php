@@ -26,9 +26,9 @@ Route::get('/', function () {
 
 //-----------LOGIN-and Register------------//
 Route::resource('login',RegistroController::class);
-Route::name('validar')->get('validar',[RegistroController::class,'validar']);
-Route::name('logout')->get('logout',[RegistroController::class,'logout']);
-Route::resource('registro',RegistroController::class);
+//Route::name('validar')->get('validar',[RegistroController::class,'validar']);
+//Route::name('logout')->get('logout',[RegistroController::class,'logout']);
+//Route::resource('registro',RegistroController::class);
 //------------vistas generales ------------//
 Route::resource('cliente',ClientesController::class);
 Route::resource('cuidador',CuidadorController::class);

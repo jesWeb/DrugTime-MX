@@ -24,7 +24,7 @@
                     <hr>
                     <p>Si tienes una cuenta, inicia sesión con tu correo electrónico.</p>
                 </div>
-                <form name="login" action="{{route('validar')}}" method="GET">
+                <form name="login" action="" method="GET">
                     {{csrf_field()}}
                     <!-- mail -->
                     <div class="foarm-floating p-2">
@@ -61,7 +61,7 @@
                 </ul>
                 <!-- btn registro -->
                 <div class="d-grid gap-2 col-6 mx-auto mt-3">
-                    <a class="btn btn-outline-primary" type="button">Registrate</a>
+                    <a class="btn btn-outline-primary" href="{{route('login.create')}}" type="button">Registrate</a>
                 </div>
 
             </div>

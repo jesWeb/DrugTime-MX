@@ -23,7 +23,7 @@
 
 
             <div class=" col-6 shadow card-body mt-5">
-                <form action="{{route('registro.store')}}" ectype="multipart/form-data" method="POST">
+                <form action="{{route('login.store')}}" ectype="multipart/form-data" method="POST">
                     {{csrf_field()}}
                     <!-- email -->
                     <div class="mb-4">
@@ -39,7 +39,7 @@
 
                    <!-- btn registro -->
                 <div class="d-grid gap-2 col-6 mx-auto mt-3">
-                    <button class="btn btn-success m-3" type="submit"  value="save">Registrate</button>
+                    <button class="btn btn-success m-3" type="submit"   value="save">Registrate</button>
                 </div>
 
                 </form>

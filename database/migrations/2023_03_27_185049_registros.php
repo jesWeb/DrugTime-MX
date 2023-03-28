@@ -20,8 +20,8 @@ return new class extends Migration
             $table->string('password');
             $table->timestamps();
              //llave foranea
-             $table->unsignedBigInteger('type_usuarios_id');
-             $table->foreign('type_usuarios_id')->references('id')->on('type_usuarios');
+           //  $table->unsignedBigInteger('type_usuarios_id');
+           //  $table->foreign('type_usuarios_id')->references('id')->on('type_usuarios');
             $table->softDeletes();
         });
     }
