@@ -7,7 +7,7 @@
 
 @endsection
 
-<div class="container-fluid">
+<div class="container-fluid mb-5">
 
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
@@ -42,9 +42,37 @@
                         <input type="time" name="time" class="form-control" id="">
                     </div>
                     <!-- dias -->
-                    <div class="mb-4">
-                        
-
+                    <div class="mt-5 text-center">
+                        <h4 class="mb-4">Selecciona los dias a tomar el medicamento </h4>    
+                    <!-- dias -->
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="dias" value="option1">
+                            <label class="form-check-label" for="inlineCheckbox1">Lunez</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="dias" value="option2">
+                            <label class="form-check-label" for="inlineCheckbox2">Martes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="dias" value="option2">
+                            <label class="form-check-label" for="inlineCheckbox2">Miercoles</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="dias" value="option2">
+                            <label class="form-check-label" for="inlineCheckbox2">jueves</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="dias" value="option2">
+                            <label class="form-check-label" for="inlineCheckbox2">viernes </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="dias" value="option2">
+                            <label class="form-check-label" for="inlineCheckbox2">Sabado</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="dias" value="option2">
+                            <label class="form-check-label" for="inlineCheckbox2">Vienes</label>
+                        </div>
                     </div>
                     <!-- btn -->
                     <div class="text-center mt-5">

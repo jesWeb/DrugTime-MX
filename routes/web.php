@@ -6,6 +6,7 @@ use App\Http\Controllers\ClientesController;
 use App\Http\Controllers\CuidadorController;
 use App\Http\Controllers\MedicamentoController;
 use App\Http\Controllers\TratamientoController;
+use App\Http\Controllers\MaquinaController;
 
 
 
@@ -34,4 +35,4 @@ Route::resource('cliente',ClientesController::class);
 Route::resource('cuidador',CuidadorController::class);
 Route::resource('medicamento',MedicamentoController::class);
 Route::resource('tratamiento',TratamientoController::class);
-Route::resource('Drugslide',MaquinaController::class);
+Route::resource('maquinas',MaquinaController::class);

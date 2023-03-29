@@ -14,6 +14,7 @@
         <div class="card-header py-3">
             <h3 class="m-1 font-weight-bold text-primary">Tu medicacion del dia</h3>
         </div>
+        
 
         <div class="mb-5 mt-5">
             <!-- contenido de medicamentos del dia  -->

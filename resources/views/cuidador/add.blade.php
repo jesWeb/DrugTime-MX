@@ -23,12 +23,13 @@
                         <img src="" alt="">
                     </div>
                 </div>
-                <form action="{{route('cuidador.store')}}" ectype="multipart/form-data" method="post">
+                <form action="{{route('cuidador.store')}}" ectype="multipart/form-data" method="POST">
                     {{csrf_field()}}
                     <!--Nombre -->
                     <div class="mb-4">
                         <label for="text" class="form-label">Nombre </label>
-                        <input type="text" class="form-control" name="name" placeholder="Ejemplo:@nombre" require id="">
+                        <input type="text" class="form-control" name="nombre" placeholder="Ejemplo:@nombre" require
+                            id="">
                     </div>
                     <!--sexo  -->
                     <div class="mb-4">
@@ -73,9 +74,10 @@
                         <input type="email" class="form-control" name="email" placeholder="@correo" id="">
                     </div>
                     <!--imagenP  -->
-                    <div class=" text-center">
+                    <!-- <div class=" text-center">
                         <input type="file" class="form-label" name="imagenP" id="">
-                    </div>
+                    </div> -->
+                   
                     <!-- btn -->
                     <div class="text-center mt-5">
                         <button type="submit" class="btn btn-primary">Guardar</button>

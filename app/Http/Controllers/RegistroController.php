@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Cliente;
 use App\Models\Registro;
+use App\Http\Controllers\ClientesController;
 use App\Models\typeUser;
 class RegistroController extends Controller
 {
@@ -54,7 +55,6 @@ class RegistroController extends Controller
         }
     }
      
-
      }
 
      //---------------------Logout-----------------//
@@ -77,6 +77,13 @@ class RegistroController extends Controller
          return view('logeo.register');
         
      } 
+
+      /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
      //registro nuevo
      public function store(Request $request){
         //formulario almacenamiento de datos
@@ -87,7 +94,7 @@ class RegistroController extends Controller
       //guardamos datos en BD 
       $registros->save();
       //vista
-    
+      //return redirect()->action(['ClientesController::class, 'info']);
 
     }
 }

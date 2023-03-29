@@ -14,15 +14,15 @@ return new class extends Migration
     public function up()
     {
         //
-        Schema::create('cuidadores',function (Blueprint $table){
+        Schema::create('cuidadors',function (Blueprint $table){
             $table->id();
             $table->string('nombre');
             $table->date('fechaN');
             $table->char('sexo');
-            $table->integer('parentesco');
+            $table->string('parentesco',20);
             $table->string('lugarTrabajo');
-            $table->integer('matricula');
-            $table->integer('Telefono');
+            $table->string('matricula');
+            $table->string('Telefono',12);
             $table->string('email')->unique();
             //$table->integer('imagenP');
             $table->timestamps();
@@ -38,6 +38,6 @@ return new class extends Migration
     public function down()
     {
         //
-        Schema::dropIfExists('cuidadores');
+        Schema::dropIfExists('cuidadors');
     }
 };

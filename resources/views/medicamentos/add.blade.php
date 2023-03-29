@@ -43,6 +43,17 @@
                             id="">
                     </div>
 
+                     <!-- tratamientos -->
+                     <div class="form-group">
+                        <label for="">Tratamiento</label>
+                        <selec class="form-control form-select" aria-label="escige el tratamiento al que pertenece"
+                            name="tratamientos_id">
+                            <option selected>Tratamiento</option>
+                            @foreach($tratamientos as $tratamiento)
+                            <option value="{{$tratamiento->id}}">{{$tratamiento->nombre}}</option>
+                            @endforeach
+                        </selec>
+                    </div>
 
 
                     <!-- btn -->

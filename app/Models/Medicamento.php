@@ -11,9 +11,9 @@ class Medicamento extends Model
     use SoftDeletes;
     protected $fillable =[
         'nombre',
-        'Descripcion',
-        'Tipo',
-        'imagenM',
+        'descripcion',
+        'tipo',
+        //'imagenM',
     ];
 
     public function Cliente() {

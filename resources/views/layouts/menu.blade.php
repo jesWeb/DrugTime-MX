@@ -45,7 +45,7 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active2">
-            <a class="nav-link" href="/Drugslide">
+            <a class="nav-link" href="/maquinas">
                 <i class="fa-solid fa-dog"></i>
                 <span>Drugslide</span></a>
         </li>

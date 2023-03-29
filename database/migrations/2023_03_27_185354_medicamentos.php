@@ -17,9 +17,9 @@ return new class extends Migration
         Schema::create('medicamentos',function (Blueprint $table){
             $table->id();
             $table->string('nombre');
-            $table->string('descripcion');
+            $table->string('descripcion',50);
             $table->string('tipo');
-            $table->Integer('imagenM');
+            //$table->Integer('imagenM');
             $table->timestamps();
             //llaves foraneas
             $table->unsignedBigInteger('tratamientos_id');

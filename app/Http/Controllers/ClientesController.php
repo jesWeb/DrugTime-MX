@@ -3,16 +3,38 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Cliente;
 class ClientesController extends Controller
 {
     //
     public function index()
     {       
         //cosulta DB eloquent laravel
-        //$cliente = clientes::all();
+        $clientes = cliente::all();
          //vista
-         return view('cliente.index');
+         return view('cliente.index',compact('clintes'));
         
      }  
+
+     public function create()
+     { 
+         
+          //vista
+          return view('cliente.info');
+         
+      } 
+
+
+    //registro nuevo
+    
+    public function store(Request $request){
+        //formulario almacenamiento de datos
+        $clientes = new Cliente;
+        $clientes->email= $request->input('email');
+        $clientes->password= $request->input('password');
+
+      //guardamos datos en BD 
+      $clientes->save();
+    }
+
 }
