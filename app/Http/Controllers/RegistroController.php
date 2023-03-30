@@ -94,7 +94,7 @@ class RegistroController extends Controller
       //guardamos datos en BD 
       $registros->save();
       //vista
-      //return redirect()->action(['ClientesController::class, 'info']);
+      return redirect()->route("cliente");
 
     }
 }

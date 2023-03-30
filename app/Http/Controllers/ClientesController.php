@@ -12,7 +12,7 @@ class ClientesController extends Controller
         //cosulta DB eloquent laravel
         $clientes = cliente::all();
          //vista
-         return view('cliente.index',compact('clintes'));
+         return view('cliente.index',compact('clientes'));
         
      }  
 
@@ -20,7 +20,7 @@ class ClientesController extends Controller
      { 
          
           //vista
-          return view('cliente.info');
+          return view('cliente.info',compact('cliente'));
          
       } 
 

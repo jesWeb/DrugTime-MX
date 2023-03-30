@@ -33,8 +33,8 @@ return new class extends Migration
             $table->unsignedBigInteger('registros_id');
             $table->foreign('registros_id')->references('id')->on('registros');
             //cuidadores 
-            $table->unsignedBigInteger('cuidadores_id');
-            $table->foreign('cuidadores_id')->references('id')->on('cuidadores');
+            $table->unsignedBigInteger('cuidadors_id');
+            $table->foreign('cuidadors_id')->references('id')->on('cuidadors');
             // tratamientos
             $table->unsignedBigInteger('tratamientos_id');
             $table->foreign('tratamientos_id')->references('id')->on('tratamientos');

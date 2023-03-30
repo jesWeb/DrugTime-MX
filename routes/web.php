@@ -32,6 +32,7 @@ Route::resource('login',RegistroController::class);
 //Route::resource('registro',RegistroController::class);
 //------------vistas generales ------------//
 Route::resource('cliente',ClientesController::class);
+Route::name('cliente')->get('cliente',[ClientesController::class,'index']);
 Route::resource('cuidador',CuidadorController::class);
 Route::resource('medicamento',MedicamentoController::class);
 Route::resource('tratamiento',TratamientoController::class);

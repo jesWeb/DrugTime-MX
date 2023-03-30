@@ -21,8 +21,8 @@ return new class extends Migration
             $table->string('Humedad');
             $table->timestamps();
             //llaves foraneas
-            $table->unsignedBigInteger('cuidadores_id');
-            $table->foreign('cuidadores_id')->references('id')->on('cuidadores');
+            $table->unsignedBigInteger('cuidadors_id');
+            $table->foreign('cuidadors_id')->references('id')->on('cuidadors');
 
             $table->unsignedBigInteger('tratamientos_id');
             $table->foreign('tratamientos_id')->references('id')->on('tratamientos');
