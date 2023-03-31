@@ -43,7 +43,7 @@
                     </div>
                     <!-- dias -->
                     <div class="mt-5 text-center">
-                        <h4 class="mb-4">Selecciona los dias a tomar el medicamento </h4>    
+                       
                     <!-- dias -->
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="dias" value="option1">
