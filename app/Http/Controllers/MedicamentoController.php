@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Medicamento;
+use App\Models\Tratamiento;
 use Illuminate\Http\Request;
 
 class MedicamentoController extends Controller
@@ -20,7 +21,8 @@ class MedicamentoController extends Controller
      public function create()
      {
          //vista de formulario
-         return view('medicamentos.add');
+         $recomendacion = Tratamiento::all('id','nombre');
+         return view('medicamentos.add',compact('recomendacion'));
      }
      /**
      * Store a newly created resource in storage.
@@ -33,12 +35,13 @@ class MedicamentoController extends Controller
      public function store(Request $request){
         //formulario almacenamiento de datos
         $Drogas = new Medicamento;
-        $Drogas->nombre=$request->input('nombre');
-        $Drogas->Descripcion=$request->input('descripcion');
-        $Drogas->Tipo=$request->input('tipo');
+        $Drogas->nombre = $request->input('nombre');
+        $Drogas->descripcion = $request->input('descripcion');
+        $Drogas->tipo=$request->input('tipo');
         $Drogas->tratamientos_id=$request->input('tratamientos_id');
          //guardamos datos en BD 
         $Drogas->save();
+        
      }
 
 

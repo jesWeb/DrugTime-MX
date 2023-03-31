@@ -23,7 +23,7 @@
                         <img src="" alt="">
                     </div>
                 </div>
-                <form action="{{route('medicamento.store')}}" ectype="multipart/form-data" method="post">
+                <form action="{{route('tratamiento.store')}}" ectype="multipart/form-data" method="post">
                     {{csrf_field()}}
                     <!--Nombre -->
                     <div class="mb-4">
@@ -37,9 +37,9 @@
                         <input type="text" class="form-control" name="dosis" id="" placeholder="1 pastilla">
                     </div>
                     <!-- horario -->
-                    <div class="mb-4">
+                    <div class="mb-4"
                         <label for="time" class="form-label">Horario</label>
-                        <input type="time" name="time" class="form-control" id="">
+                        <input type="time" name="horario" class="form-control" id="t">
                     </div>
                     <!-- dias -->
                     <div class="mt-5  text-center">
@@ -47,37 +47,37 @@
                         <!-- dias -->
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="dias"
-                                value="option1">
+                                value="lunes">
                             <label class="form-check-label" for="inlineCheckbox1">Lunez</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="dias"
-                                value="option2">
+                                value="martes">
                             <label class="form-check-label" for="inlineCheckbox2">Martes</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="dias"
-                                value="option3">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" name="dias"
+                                value="miercoles">
                             <label class="form-check-label" for="inlineCheckbox2">Miercoles</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="dias"
-                                value="option4">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" name="dias"
+                                value="jueves">
                             <label class="form-check-label" for="inlineCheckbox2">jueves</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="dias"
-                                value="option5">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox5" name="dias"
+                                value="viernes">
                             <label class="form-check-label" for="inlineCheckbox2">viernes </label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="dias"
-                                value="option6">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox6" name="dias"
+                                value="sabado ">
                             <label class="form-check-label" for="inlineCheckbox2">Sabado</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="dias"
-                                value="option7">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox7" name="dias"
+                                value="domingo">
                             <label class="form-check-label" for="inlineCheckbox2"> Domingo</label>
                         </div>
                     </div>
