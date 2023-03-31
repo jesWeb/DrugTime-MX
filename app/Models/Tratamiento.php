@@ -21,4 +21,9 @@ class Tratamiento extends Model
         return $this->hasMany(Cliente::class);
 
     }
+    //relacion uno a uno 
+    public function Medicamento(){
+        return $this->hasOne(Medicamento::class);
+    }
+   
 }

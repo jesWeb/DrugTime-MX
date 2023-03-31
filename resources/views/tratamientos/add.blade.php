@@ -42,38 +42,48 @@
                         <input type="time" name="time" class="form-control" id="">
                     </div>
                     <!-- dias -->
-                    <div class="mt-5 text-center">
-                       
-                    <!-- dias -->
+                    <div class="mt-5  text-center">
+
+                        <!-- dias -->
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="dias" value="option1">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="dias"
+                                value="option1">
                             <label class="form-check-label" for="inlineCheckbox1">Lunez</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="dias" value="option2">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="dias"
+                                value="option2">
                             <label class="form-check-label" for="inlineCheckbox2">Martes</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="dias" value="option2">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="dias"
+                                value="option3">
                             <label class="form-check-label" for="inlineCheckbox2">Miercoles</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="dias" value="option2">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="dias"
+                                value="option4">
                             <label class="form-check-label" for="inlineCheckbox2">jueves</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="dias" value="option2">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="dias"
+                                value="option5">
                             <label class="form-check-label" for="inlineCheckbox2">viernes </label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="dias" value="option2">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="dias"
+                                value="option6">
                             <label class="form-check-label" for="inlineCheckbox2">Sabado</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="dias" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">Vienes</label>
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="dias"
+                                value="option7">
+                            <label class="form-check-label" for="inlineCheckbox2"> Domingo</label>
                         </div>
                     </div>
+                    
+
+
                     <!-- btn -->
                     <div class="text-center mt-5">
                         <button type="submit" class="btn btn-primary">Guardar</button>

@@ -23,7 +23,7 @@
 
             <div class="mb-5 mt-5">
                 <!-- contenido cuidadores -->
-                <div class="row">
+                <div class="row justify-content-center">
                     <!-- vista de base de datos -->
                     <!-- card-1 -->
                     <div class="col-4">
@@ -41,45 +41,9 @@
                             </div>
                         </div>
                     </div>
-                    <!--card-2  -->
-                    <div class="col-4">
-                        <div class="card cards-today rounded shadow-sm cliente-card">
-                            <!-- imagen -->
-                            <img src="" alt="" class="card-img-top">
-                            <!-- descripcion de card cliente -->
-                            <div class="card-body text-center">
-                                <!-- titulo-card -->
-                                <h4 class="card-title">Elnombre</h4>
-                                <!-- info card cuidador -->
-                                <p class="card-text">nombre</p>
-                                <p class="card-text">Puesto</p>
-                                <p class="card-text">Telefono</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- card-3-->
-                    <div class="col-4">
-                        <div class="card cards-today rounded shadow-sm cliente-card">
-                            <!-- imagen -->
-                            <img src="" alt="" class="card-img-top">
-                            <!-- descripcion de card cliente -->
-                            <div class="card-body text-center">
-                                <!-- titulo-card -->
-                                <h4 class="card-title">Elnombre</h4>
-                                <!-- info card cuidador -->
-                                <p class="card-text">nombre</p>
-                                <p class="card-text">Puesto</p>
-                                <p class="card-text">Telefono</p>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
-
-
         </div>
-
     </div>
 
     @include('layouts.footer')

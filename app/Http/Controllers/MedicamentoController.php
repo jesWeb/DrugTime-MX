@@ -36,6 +36,7 @@ class MedicamentoController extends Controller
         $Drogas->nombre=$request->input('nombre');
         $Drogas->Descripcion=$request->input('descripcion');
         $Drogas->Tipo=$request->input('tipo');
+        $Drogas->tratamientos_id=$request->input('tratamientos_id');
          //guardamos datos en BD 
         $Drogas->save();
      }

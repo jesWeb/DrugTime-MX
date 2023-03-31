@@ -50,19 +50,7 @@
                     hola
                 </div>
             </div>
-            <!--card-2  -->
-            <div class="col-4">
-                <div class="card cards-today rounded">
-                    hola
-                </div>
-            </div>
-            <!-- card-3-->
-            <div class="col-4">
-                <div class="card cards-today rounded">
-                    hola
-                </div>
-            </div>
-
+            
         </div>
     </div>
 

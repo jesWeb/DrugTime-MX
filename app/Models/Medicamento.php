@@ -13,6 +13,7 @@ class Medicamento extends Model
         'nombre',
         'descripcion',
         'tipo',
+        'tratamientos_id'
         //'imagenM',
     ];
 
@@ -20,4 +21,9 @@ class Medicamento extends Model
         return $this->hasMany(Cliente::class);
 
     }
+    //relacion uno a uno 
+    public function Tratamiento(){
+        return $this->belongsTo(Tratamiento::class);
+    }
+
 }

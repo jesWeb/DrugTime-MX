@@ -37,4 +37,9 @@ class ClientesController extends Controller
       $clientes->save();
     }
 
+    public function show($id){
+      $Mostrarc = cliente::find($id);
+      return view('cliente.show',compact('MostrarCliente'));
+    }
+
 }

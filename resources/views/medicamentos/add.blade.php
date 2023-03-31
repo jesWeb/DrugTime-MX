@@ -39,21 +39,20 @@
                     <!--Tipo -->
                     <div class="mb-4">
                         <label for="text" class="form-label">Administracion </label>
-                        <input type="text" class="form-control" name="Tipo" placeholder="Ejemplo: oral" require
-                            id="">
+                        <input type="text" class="form-control" name="Tipo" placeholder="Ejemplo: oral" require id="">
                     </div>
 
-                     <!-- tratamientos -->
-                     <div class="form-group">
+                        <div class="form-group">
                         <label for="">Tratamiento</label>
-                        <selec class="form-control form-select" aria-label="escige el tratamiento al que pertenece"
+                        <select class="form-control form-select" aria-label="escige el tratamiento al que pertenece"
                             name="tratamientos_id">
                             <option selected>Tratamiento</option>
                             @foreach($tratamientos as $tratamiento)
                             <option value="{{$tratamiento->id}}">{{$tratamiento->nombre}}</option>
                             @endforeach
-                        </selec>
+                        </select>
                     </div>
+
 
 
                     <!-- btn -->

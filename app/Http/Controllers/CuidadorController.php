@@ -45,6 +45,8 @@ class CuidadorController extends Controller
     $trabajadores -> email =$request->input('email');
     //guardamos datos en BD 
      $trabajadores->save();
+     //vista
+     return redirect('cuidador');
 }
 
 

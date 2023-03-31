@@ -12,9 +12,9 @@ class TratamientoController extends Controller
      public function index()
      {  
               //cosulta DB eloquent laravel
-         $tratamientos = Tratamiento::all();
+         $recomendacion = Tratamiento::all();
           //vista
-          return view('tratamientos.index',compact('tratamientos'));
+          return view('tratamientos.index',compact('recomendacion'));
          
       } 
  
@@ -33,14 +33,13 @@ class TratamientoController extends Controller
         //registro de medicamentos
      public function store(Request $request){
         //formulario almacenamiento de datos
-        $Tratamientos = new Tratamiento;
-        $Tratamientos->nombre=$request->input('nombre');
-        $Tratamientos->dosis=$request->input('dosis');
-        $Tratamientos->horario=$request->input('horario');
-        $Tratamientos->dias=$request->input('dias');
+        $trato = new Tratamiento;
+        $trato->nombre=$request->input('nombre');
+        $trato->dosis=$request->input('dosis');
+        $trato->horario=$request->input('horario');
+        $trato->dias=$request->input('dias');
          //guardamos datos en BD 
-        $Tratamientos->save();
-        
-
+        $trato->save();
+    
      }
 }
