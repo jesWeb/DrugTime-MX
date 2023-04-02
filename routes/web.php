@@ -27,12 +27,16 @@ Route::get('/', function () {
 
 //-----------LOGIN-and Register------------//
 Route::resource('login',RegistroController::class);
-//Route::name('validar')->get('validar',[RegistroController::class,'validar']);
-//Route::name('logout')->get('logout',[RegistroController::class,'logout']);
+Route::name('validar')->get('validar',[RegistroController::class,'validar']);
+Route::name('logout')->get('logout',[RegistroController::class,'logout']);
 //Route::resource('registro',RegistroController::class);
 //------------vistas generales ------------//
 Route::resource('cliente',ClientesController::class);
 Route::name('cliente')->get('cliente',[ClientesController::class,'index']);
+// Route::name('info')->get('info',[ClientesController::class,'info']);
+
+
+
 Route::resource('cuidador',CuidadorController::class);
 Route::resource('medicamento',MedicamentoController::class);
 Route::resource('tratamiento',TratamientoController::class);
