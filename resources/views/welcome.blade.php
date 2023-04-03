@@ -13,7 +13,7 @@
 </head>
 
 <header>
-    <nav class="navbar d-flex justify-content-center navbar-expand-lg navbar-light bg-primary">
+    <nav class="navbar d-flex justify-content-center navbar-expand-lg navbar-light text-center bg-primary">
         <div class="container-fluid ">
             <a class="navbar-brand" href="#">Navbar</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -45,84 +45,112 @@
 <body>
     <div class="container">
         <!--PROMO-slider-->
-        <div class="row mt-3 mb-3">
-            <!--PROMO--->
-            <div class="col-4">
-                <div class="">
-                    <h3>titulo</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore voluptatem quas harum expedita
-                        esse, ipsum necessitatibus molestiae officia vero perspiciatis maxime delectus blanditiis
-                        nostrum modi.</p>
+        <div id="carouselExampleSlidesOnly" class="carousel slide   text-center m-4" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- slider-content -->
+                <div class="carousel-item active">
+                    <!-- img-slider -->
+                    <img src="{{asset('img/visuales/slider2.jpg')}}" class="d-block " style="height: 70vh; Width:100%;"
+                        alt="introduccion">
+                    <!-- descripcion-slider -->
+                    <div class="carousel-caption d-none d-md-block text-start text- h3">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
                 </div>
-            </div>
-
-            <div class="col8">
-                <img src="https://picsum.photos/200/300.jpg" alt="">
+                <!-- slider-content -->
+                <div class="carousel-item">
+                    <!-- img-slider -->
+                    <img src="{{asset('img/visuales/slider3.jpg')}}" class="d-block  " style="height: 70vh; Width:100%;"
+                        alt="...">
+                    <!-- descripcion-slider -->
+                    <div class="carousel-caption d-none d-md-block text-start h3">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+                <!-- slider-content -->
+                <div class="carousel-item">
+                    <!-- img-slider -->
+                    <img src="{{asset('img/visuales/slider5.jpg')}}" class="d-block  " style="height: 70vh; Width:100%;"
+                        alt="...">
+                    <!-- descripcion-slider -->
+                    <div class="carousel-caption d-none d-md-block text-start h3">
+                        <h5>DrugTime</h5>
+                        <p>Nuestra empresa esta comprometida con el medio ambiente.</p>
+                    </div>
+                </div>
             </div>
         </div>
         <!--about us--->
-        <section class="mb-4 bg-primary">
+        <section class="mb-4 mt-2 ">
             <div class="row justify-content-center">
                 <!--PROMO--->
                 <div class="col-4">
-                    <div class="card">
-                        <h4>titulo</h4>
+                    <!-- cards -->
+                    <div class="card text-center boxInfo ">
+                        <!-- imagenes -->
+                        <img src="{{asset('img/icons/atencion-medica.png')}}" style="height: 150px; Width:150px;"
+                            alt="atencion medica">
+                        <!-- descripciom -->
+                        <h4>Asistencia</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus, autem?</p>
                     </div>
                 </div>
                 <!--PROMO--->
                 <div class="col-4">
-                    <div class="card">
-                        <h4>titulo</h4>
+                    <!-- cards -->
+                    <div class="card text-center boxInfo ">
+                        <!-- imagenes -->
+                        <img src="{{asset('img/icons/equipo-medico.png')}}" style="height: 150px; Width:150px;"
+                            alt="medicos y cuidadores">
+                        <!-- descripciom -->
+                        <div class="mt-2">
+                            <h4>Cuidado </h4>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus, autem?</p>
+                        </div>
                     </div>
                 </div>
                 <!--PROMO--->
                 <div class="col-4">
-                    <div class="card">
-                        <h4>titulo</h4>
+                    <!-- cards -->
+                    <div class="card text-center boxInfo ">
+                        <!-- imagenes -->
+                        <img src="{{asset('img/icons/registros-medicos.png')}}" style="height: 150px; Width:150px;"
+                            alt="lista de medicamentos">
+                        <!-- descripciom -->
+                        <div class="mt-3">
+                            <h4>Seguimiento</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus, autem?</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="">
-                <div class="">
-                    <h3>¿Quienes somos?</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam, ipsa nihil architecto, impedit
-                        maxime voluptatem quos provident ad molestiae alias eligendi iusto harum? Obcaecati unde vel hic
-                        iste itaque veritatis.</p>
-                    <div class="row">
-                        <div class="col-6">
-                            <h4 class="mt-3 text-center">titulo</h4>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, accusamus.</p>
-                        </div>
-                        <div class="col-6">
-                            <h4 class="mt-3 text-center">titulo</h4>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, accusamus.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
         </section>
         <!--drugslide-->
         <section class="mt-4" id="">
-            <div class="row align-items-center bg-danger">
+            <div class="row align-items-center justify-content-center bg-light" style=" Width:80v-max;">
                 <!--PROMO--->
                 <div class="col-6">
-                    <div class="d-flex justify-content-center">
+                    <div class="d-flex justify-content-center ">
                         <div class="promo-img">
-                            <img src="https://picsum.photos/200/300.jpg" alt="">
+                            <img src="{{asset('img/visuales/relog.jpg')}}" class="img-fluid rounded-start" style="height: 50v-max; Width:30vw;"
+                                alt="relog">
                         </div>
                     </div>
                 </div>
                 <!--PROMO--->
-                <div class="col-6">
-                    <div class=" text-center   ">
+                <div class="col-6 ">
+                    <div class=" text-center  ">
                         <h4>Adquiere tu Drugslide </h4>
                         <p>Tomar ahora tus medicamentos sera muy futurista </p>
                         <a href="" class="btn btn-primary">Comprar ahora </a>
                     </div>
                 </div>
             </div>
+           
         </section>
     </div>
 
