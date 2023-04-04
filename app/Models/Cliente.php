@@ -17,11 +17,14 @@ class Cliente extends Model
         'sexo',
         'peso',
         'alergias',
-        'enfermedades',
         'telefono',
         'imagenU',
+        'enfermedades',
+        'email',
+        'password',
+        'type_usuarios_id'
     ];
-    //relacion uno a muchos conexion de modelos de fuera  
+    //relacion uno a muchos conexion de modelos de fuera
      //tipo user
      public function Typeuser(){
         return $this->belongsTo(Typeuser::class);
@@ -39,11 +42,11 @@ class Cliente extends Model
     public function Tratamiento(){
         return $this->belongsTo(Tratamiento::class);
     }
-   
+
     public function Medicamento(){
         return $this->belongsTo(Medicamento::class);
     }
-    
+
     public function Maquina(){
         return $this->belongsTo(Maquina::class);
     }

@@ -28,20 +28,19 @@
                         <!-- vista de base de datos -->
                         <!-- card-1 -->
                         <div class="card shadow-sm">
-                        @foreach($cuidadores as $cuidado)
-                                <!-- imagen -->
-                                <img src="" alt="" class="card-img-top">
-                                <!-- descripcion de card cliente -->
-                                <div class=" text-center text-inline-block">
-                                    <!-- titulo-card -->
-                                    <h4 class="card-title">{{$cuidado->nombre}}</h4>
-                                    <!-- info card cuidador -->
-                                    <p class="card-text">{{$cuidado->id}}</p>
-                                    <p class="card-text">{{$cuidado->lugarTrabajo}}</p>
-                                    <p class="card-text">{{$cuidado->parentesco}}</p>
-                                    <p class="card-text">{{$cuidado->Telefono}}</p>
-                                    @endforeach
-                                </div>
+                            @foreach($cuidadores as $cuidado)
+                            <!-- imagen -->
+                            <!-- <img src="" alt="" class="card-img-top"> -->
+                            <!-- descripcion de card cliente -->
+                            <div class=" text-center ">
+                                <!-- info card cuidador -->
+                                <h4 class="card-title">{{$cuidado->nombre}}</h4>
+                                <p class="card-text">{{$cuidado->lugarTrabajo}}</p>
+                                <p class="card-text">{{$cuidado->parentesco}}</p>
+                                <p class="card-text">{{$cuidado->Telefono}}</p>
+
+                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>

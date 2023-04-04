@@ -7,6 +7,7 @@ use App\Http\Controllers\CuidadorController;
 use App\Http\Controllers\MedicamentoController;
 use App\Http\Controllers\TratamientoController;
 use App\Http\Controllers\MaquinaController;
+use App\Http\Controllers\Auth\AuthController;
 
 
 
@@ -26,14 +27,37 @@ Route::get('/', function () {
 });
 
 //-----------LOGIN-and Register------------//
-Route::resource('login',RegistroController::class);
-Route::name('validar')->get('validar',[RegistroController::class,'validar']);
-Route::name('logout')->get('logout',[RegistroController::class,'logout']);
-//Route::resource('registro',RegistroController::class);
+Route::prefix('auth')->group(function () {
+    Route::get('/user/signup', [AuthController::class, 'create'])->name('registerAuth');
+    Route::get('/user/login', [AuthController::class, 'index'])->name('loginAuth');
+    Route::get('/user/activacion', [AuthController::class, 'activacion'])->name('activacion');
+    Route::get('/signup', [AuthController::class, 'signup'])->name('signup');
+});
+
+Route::prefix('cliente')->group(function () {
+    Route::get('/info', [ClientesController::class, 'info'])->name('infoCliente');
+    Route::get('/user/login', [AuthController::class, 'index'])->name('loginAuth');
+    Route::get('/user/activacion', [AuthController::class, 'activacion'])->name('activacion');
+    Route::get('/signup', [AuthController::class, 'signup'])->name('signup');
+});
+
+Route::prefix('peticiones')->group(function () {
+    //Cliente
+    Route::post('/user/resgister', [AuthController::class, 'registerCreate'])->name('registerCreate');
+    Route::post('/user/saveSettingsC', [ClientesController::class, 'saveSettingsC'])->name('saveSettingsC');
+});
+
+
+
+
+
+
+
+
 //------------vistas generales ------------//
 Route::resource('cliente',ClientesController::class);
-Route::name('cliente')->get('cliente',[ClientesController::class,'index']);
-// Route::name('info')->get('info',[ClientesController::class,'info']);
+//Route::name('cliente')->get('cliente',[ClientesController::class,'info']);
+//Route::name('info')->get('info',[RegistroController::class,'info']);
 
 
 

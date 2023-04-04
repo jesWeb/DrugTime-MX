@@ -23,7 +23,7 @@
 
 
             <div class=" col-6 shadow card-body mt-5">
-                <form action="{{route('login.store')}}" ectype="multipart/form-data" method="POST">
+                <form action="{{route('registerCreate')}}" ectype="multipart/form-data" method="POST">
                     {{csrf_field()}}
                     <!-- email -->
                     <div class="mb-4">

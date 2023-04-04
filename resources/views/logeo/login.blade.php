@@ -61,7 +61,7 @@
                 </ul>
                 <!-- btn registro -->
                 <div class="d-grid gap-2 col-6 mx-auto mt-3">
-                    <a class="btn btn-outline-primary" href="{{route('login.create')}}" type="button">Registrate</a>
+                    <a class="btn btn-outline-primary" href="{{route('registerAuth')}}" type="button">Registrate</a>
                 </div>
 
             </div>

@@ -136,8 +136,8 @@
                 <div class="col-6">
                     <div class="d-flex justify-content-center ">
                         <div class="promo-img">
-                            <img src="{{asset('img/visuales/relog.jpg')}}" class="img-fluid rounded-start" style="height: 50v-max; Width:30vw;"
-                                alt="relog">
+                            <img src="{{asset('img/visuales/relog.jpg')}}" class="img-fluid rounded-start"
+                                style="height: 50v-max; Width:30vw;" alt="relog">
                         </div>
                     </div>
                 </div>
@@ -150,7 +150,7 @@
                     </div>
                 </div>
             </div>
-           
+
         </section>
     </div>
 

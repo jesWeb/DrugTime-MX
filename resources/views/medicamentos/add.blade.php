@@ -50,18 +50,15 @@
                                     aria-label="escige el tratamiento al que pertenece" name="tratamientos_id">
                                     <option selected>Tratamiento</option>
                                     @foreach($recomendacion as $recomend)
-                                    <option value="{{$recomendacion->id}}">{{$recomend->nombre}}</option>
+                                    <option value="{{$recomend->id}}">{{$recomend->nombre}}</option>
                                     @endforeach
                                 </select>
                             </label>
-
                         </div>
-
                         <!-- btn -->
                         <div class="text-center mt-5">
                             <button type="submit" class="btn btn-primary">Guardar</button>
                         </div>
-
                     </form>
                 </div>
             </div>

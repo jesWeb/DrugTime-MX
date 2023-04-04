@@ -26,19 +26,19 @@
                 <div class="row justify-content-center">
                     <!-- vista de base de datos -->
                     <!-- card-1 -->
-                    <div class="col-4">
+                    <div class="col-auto">
                         <div class="card cards-today rounded shadow-sm cliente-card">
                             <!-- imagen -->
-                            <img src="" alt="" class="card-img-top">
+                            @foreach($medicamentos as $medicamento)
                             <!-- descripcion de card cliente -->
                             <div class="card-body text-center">
                                 <!-- titulo-card -->
-                                <h4 class="card-title">Elnombre</h4>
+                                <h4 class="card-title">{{$medicamento->nombre}}</h4>
                                 <!-- info card cuidador -->
-                                <p class="card-text">nombre</p>
-                                <p class="card-text">Puesto</p>
-                                <p class="card-text">Telefono</p>
+                                <p class="card-text">{{$medicamento->tipo}}</p>
+                                <p class="card-text">{{$medicamento->descripcion}}</p>
                             </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
