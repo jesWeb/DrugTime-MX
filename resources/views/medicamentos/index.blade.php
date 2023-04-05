@@ -20,29 +20,52 @@
                             class=" m-2 fa-solid fa-plus" style="color: #fcfcfc;"></i></a>
                 </div>
             </div>
-
-            <div class="mb-5 mt-5">
-                <!-- contenido cuidadores -->
-                <div class="row justify-content-center">
-                    <!-- vista de base de datos -->
-                    <!-- card-1 -->
-                    <div class="col-auto">
-                        <div class="card cards-today rounded shadow-sm cliente-card">
-                            <!-- imagen -->
+            {{-- table contenido --}}
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered text-center" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>id</th>
+                                <th>Nombre</th>
+                                <th>Administracion</th>
+                                <th>Descripcion</th>
+                                <th>Tratamiento</th>
+                                <!-- <th>Operaciones</th> -->
+                            </tr>
+                        <tbody>
+                            {{-- consulta eloquente en vista  --}}
                             @foreach($medicamentos as $medicamento)
-                            <!-- descripcion de card cliente -->
-                            <div class="card-body text-center">
-                                <!-- titulo-card -->
-                                <h4 class="card-title">{{$medicamento->nombre}}</h4>
-                                <!-- info card cuidador -->
-                                <p class="card-text">{{$medicamento->tipo}}</p>
-                                <p class="card-text">{{$medicamento->descripcion}}</p>
-                            </div>
+                            <tr>
+                                <td>{{$medicamento->id}}</td>
+                                <td>{{$medicamento->nombre}}</td>
+                                <td>{{$medicamento->tipo}}</td>
+                                <td>{{$medicamento->descripcion}}</td>
+                                <td>
+                                    <div class="row justify-content-center">
+                                        <div class="col-auto">
+                                            <form action="medicamento/{{$medicamento->id}}" method="post">
+                                                {!! csrf_field() !!}
+                                                @method("delete")
+                                                <button class="btn btn-danger " type="submit"><i
+                                                        class="fa-solid fa-trash"></i></button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
                             @endforeach
-                        </div>
-                    </div>
+                        </tbody>
+                        </thead>
+                    </table>
                 </div>
             </div>
+
+
+
+
+
+
         </div>
     </div>
 

@@ -10,14 +10,14 @@ class TratamientoController extends Controller
     //
      //
      public function index()
-     {  
+     {
         //cosulta DB eloquent laravel
          $recomendacion = Tratamiento::all();
           //vista
           return view('tratamientos.index',compact('recomendacion'));
-         
-      } 
- 
+
+      }
+
       public function create()
       {
           //vista de formulario
@@ -38,8 +38,25 @@ class TratamientoController extends Controller
         $trato->dosis=$request->input('dosis');
         $trato->horario=$request->input('horario');
         $trato->dias=$request->input('dias');
-         //guardamos datos en BD 
+         //guardamos datos en BD
         $trato->save();
-    
+
      }
+
+
+     /**
+    *Elimina el recurso especificado del almacenamiento.
+    *
+    * @param  int  $id
+    * @return \Illuminate\Http\Response
+    */
+    //eliminacion
+    public function destroy($id)
+    {
+        //ELIMINAR
+        $recomend = Tratamiento::findOrFail($id);
+        $recomend ->delete();
+        return "El resgistro se elimino con exito";
+    }
+
 }

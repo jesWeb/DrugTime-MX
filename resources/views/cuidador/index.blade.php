@@ -14,39 +14,59 @@
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
+                {{-- titulo --}}
                 <h3 class="m-1 font-weight-bold text-primary">Tus Cuidadores</h3>
+                {{-- btn-cuidador --}}
                 <div class="d-flex justify-content-end">
                     <a class="btn btn-primary " href="{{route('cuidador.create')}}">Agregar Cuidador<i
                             class=" m-2 fa-solid fa-plus" style="color: #fcfcfc;"></i></a>
                 </div>
             </div>
+            {{-- tabla de contenido --}}
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered text-center" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>id</th>
+                                <th>Nombre</th>
+                                <th>Parentesco</th>
+                                <th>Lugar de trabajo</th>
+                                <th>Telefono</th>
+                                <th>correo electronico</th>
+                                <th>Eliminar</th>
+                                <!-- <th>Operaciones</th> -->
+                            </tr>
+                            <tbody>
+                                {{-- consulta eloquente en vista  --}}
+                                @foreach($cuidadores as $cuidado)
+                                    <tr>
+                                        <td>{{$cuidado->id}}</td>
+                                        <td>{{$cuidado->nombre}}</td>
+                                        <td>{{$cuidado->parentesco}}</td>
+                                        <td>{{$cuidado->lugarTrabajo}}</td>
+                                        <td>{{$cuidado->Telefono}}</td>
+                                        <td>{{$cuidado->email}}</td>
+                                        <td>
+                                            <div class="row justify-content-center">
+                                                <div class="col-auto">
+                                                    <form action="cuidador/{{$cuidado->id}}" method="post">
+                                                        {!! csrf_field() !!}
+                                                        @method("delete")
+                                                        <button class="btn btn-danger " type="submit"><i
+                                                                class="fa-solid fa-trash"></i></button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                @endforeach
 
-            <div class="mb-5 mt-5">
-                <!-- contenido cuidadores -->
-                <div class="d-flex justify-content-center flex-row ">
-                    <div class="p-2">
-                        <!-- vista de base de datos -->
-                        <!-- card-1 -->
-                        <div class="card shadow-sm">
-                            @foreach($cuidadores as $cuidado)
-                            <!-- imagen -->
-                            <!-- <img src="" alt="" class="card-img-top"> -->
-                            <!-- descripcion de card cliente -->
-                            <div class=" text-center ">
-                                <!-- info card cuidador -->
-                                <h4 class="card-title">{{$cuidado->nombre}}</h4>
-                                <p class="card-text">{{$cuidado->lugarTrabajo}}</p>
-                                <p class="card-text">{{$cuidado->parentesco}}</p>
-                                <p class="card-text">{{$cuidado->Telefono}}</p>
 
-                            </div>
-                            @endforeach
-                        </div>
-                    </div>
+                            </tbody>
+                        </thead>
+                    </table>
                 </div>
-                <div class="p-2"></div>
-                <div class="p-2"></div>
-
             </div>
         </div>
     </div>

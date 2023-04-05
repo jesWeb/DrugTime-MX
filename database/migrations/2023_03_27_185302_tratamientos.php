@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('nombre');
             $table->integer('dosis');
             $table->time('horario');
-            $table->dateTime('dias');
+            $table->string('dias');
             $table->timestamps();
             $table->softDeletes();
         });

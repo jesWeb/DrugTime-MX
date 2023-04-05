@@ -9,21 +9,21 @@ class CuidadorController extends Controller
 {
     //
     public function index()
-    {   
+    {
         //cosulta DB eloquent laravel
         $cuidadores = Cuidador::all();
          //vista
          return view('cuidador.index',compact('cuidadores'));
-        
-     } 
 
-  
+     }
+
+
   public function create()
    {
        //vista de formulario
        return view('cuidador.add');
    }
-   
+
     /**
      * Store a newly created resource in storage.
      *
@@ -31,7 +31,7 @@ class CuidadorController extends Controller
      * @return \Illuminate\Http\Response
      */
    //registro de cuidadoe
-   
+
    public function store(Request $request){
     //formulario almacenamiento de datos
     $trabajadores = new Cuidador;
@@ -43,13 +43,26 @@ class CuidadorController extends Controller
     $trabajadores -> Telefono =$request->input('Telefono');
     $trabajadores -> lugarTrabajo =$request->input('lugarTrabajo');
     $trabajadores -> email =$request->input('email');
-    //guardamos datos en BD 
+    //guardamos datos en BD
      $trabajadores->save();
      //vista
      return redirect('cuidador');
 }
 
-
+/**
+    *Elimina el recurso especificado del almacenamiento.
+    *
+    * @param  int  $id
+    * @return \Illuminate\Http\Response
+    */
+    //eliminacion
+    public function destroy($id)
+    {
+        //ELIMINAR
+        $cuidado = Cuidador::findOrFail($id);
+        $cuidado ->delete();
+        return "El resgistro se elimino con exito";
+    }
 
 
 }

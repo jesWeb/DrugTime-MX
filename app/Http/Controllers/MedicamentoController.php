@@ -10,13 +10,13 @@ class MedicamentoController extends Controller
 {
     //
     public function index()
-    {   
+    {
           //cosulta DB eloquent laravel
           $medicamentos = Medicamento::all('nombre','tipo','descripcion');
          //vista
          return view('medicamentos.index',compact('medicamentos'));
-        
-     } 
+
+     }
 
      public function create()
      {
@@ -38,14 +38,27 @@ class MedicamentoController extends Controller
         $Drogas->nombre = $request->input('nombre');
         $Drogas->descripcion = $request->input('descripcion');
         $Drogas->tipo=$request->input('tipo');
-
         $Drogas->tratamientos_id=$request->input('tratamientos_id');
-         //guardamos datos en BD 
+         //guardamos datos en BD
         $Drogas->save();
-        
+
+
      }
 
-
+      /**
+    *Elimina el recurso especificado del almacenamiento.
+    *
+    * @param  int  $id
+    * @return \Illuminate\Http\Response
+    */
+    //eliminacion
+    public function destroy($id)
+    {
+        //ELIMINAR
+        $medicamento = Medicamento::findOrFail($id);
+        $medicamento ->delete();
+        return "El resgistro se elimino con exito";
+    }
 
 
 }
